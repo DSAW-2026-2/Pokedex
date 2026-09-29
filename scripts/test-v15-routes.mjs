@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+const routes = await import('../src/utils/routes.ts');
+assert.equal(typeof routes.compareEvolutionPath, 'function', 'Debe existir compareEvolutionPath');
+assert.equal(typeof routes.compareFormChangesPath, 'function', 'Debe existir compareFormChangesPath');
+assert.equal(typeof routes.generationExplorerPath, 'function', 'Debe existir generationExplorerPath');
+assert.equal(typeof routes.shinyGalleryPath, 'function', 'Debe existir shinyGalleryPath');
+assert.equal(routes.compareEvolutionPath('eevee','sylveon'), '/evolucion/eevee/sylveon');
+assert.equal(routes.compareFormChangesPath('ninetales','ninetales-alola'), '/formas/comparar/ninetales/ninetales-alola');
+assert.equal(routes.generationExplorerPath(), '/explorar/generaciones');
+assert.equal(routes.shinyGalleryPath('eevee'), '/pokemon/eevee/galeria');
+console.log('PASS rutas v15');

@@ -1,0 +1,43 @@
+{
+  "name": "pokecheck-react-web",
+  "private": true,
+  "version": "19.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite --open",
+    "dev:open": "vite --open",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "preview:open": "vite preview --open",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "verify:ui": "node scripts/verify-v18-ui.mjs",
+    "verify:v14": "node scripts/verify-v14-ui.mjs",
+    "verify:v14.1": "node scripts/verify-v14-ui.mjs && node scripts/verify-v14-spanish-options.mjs",
+    "verify:v15": "node scripts/verify-v14-spanish-options.mjs && node --experimental-strip-types scripts/test-v15-routes.mjs && node scripts/verify-v15-ui.mjs",
+    "verify:v17": "node scripts/test-v17-home.mjs && node scripts/verify-v17-ui.mjs",
+    "verify:v18": "node --experimental-strip-types scripts/test-v18-features.mjs && node scripts/verify-v18-ui.mjs",
+    "verify:v19": "node --experimental-strip-types scripts/test-v19-team-detective.mjs && node scripts/verify-v19-ui.mjs",
+    "verify:v19.1": "node --experimental-strip-types scripts/test-v19-1-team-forms.mjs && node --experimental-strip-types scripts/test-v19-team-detective.mjs && node scripts/verify-v19-1-ui.mjs"
+  },
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "@testing-library/user-event": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "jsdom": "latest",
+    "typescript": "latest",
+    "vite": "latest",
+    "vitest": "latest"
+  }
+}
