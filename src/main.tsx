@@ -9,7 +9,7 @@ if (!root) throw new Error("No se encontró el elemento #root.");
 
 createRoot(root).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <App />
     </BrowserRouter>
   </StrictMode>,

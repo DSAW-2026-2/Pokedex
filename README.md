@@ -1,5 +1,10 @@
 # PokéCheck v19.1
 
+**Autor:** Nicolás García Mejía  
+**Repositorio:** https://github.com/DSAW-2026-2/Pokedex  
+**Sitio desplegado:** https://dsaw-2026-2.github.io/Pokedex/
+
+> Proyecto desarrollado para DSAW 2026-2. El sitio se despliega automáticamente en GitHub Pages desde la rama `main`.
 
 ## Novedad v19.1: formas en Team Builder
 
@@ -161,3 +166,10 @@ npm.cmd run verify:v17
 
 ## Fuente de datos
 PokéAPI. Las recomendaciones y textos educativos de PokéCheck no sustituyen un verificador oficial de reglamentos competitivos.
+
+
+## Despliegue en GitHub Pages
+
+El repositorio incluye `.github/workflows/deploy-pages.yml`. Cada `push` a `main` ejecuta la verificación de v19.1, compila la aplicación y publica `dist` en GitHub Pages.
+
+Si Pages aún no está activado en el repositorio, abrir **Settings → Pages** y seleccionar **GitHub Actions** como fuente de despliegue.
